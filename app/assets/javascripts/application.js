@@ -10,6 +10,12 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require typed
+//= require jquery
+//= require jquery_ujs
+//= require ace-rails-ap
 //= require rails-ujs
 //= require turbolinks
+//= require underscore
+//= require socket.io
 //= require_tree .

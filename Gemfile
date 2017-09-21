@@ -4,10 +4,26 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+# gem for node-rails to rty integrating a node app with ror
+gem "node-rails", git: "https://github.com/cloudspace/node-rails.git"
+# enable rack cors
+gem 'rack-cors'
+# use http party
 
+# Use Hackerack api for compiling
+gem 'hackerrank', '~> 0.1.0'
+
+
+gem "typedjs-rails", "~> 1.0.4"
+# Use ace for code editor
+gem 'ace-rails-ap', '~> 4.1', '>= 4.1.1'
+# Use node-rails  to serve node code
+gem 'node-rails', git: 'https://github.com/cloudspace/node-rails.git'
+
+gem 'redis-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 5.1.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -19,6 +35,8 @@ gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Use jquery for javascript
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -33,6 +51,9 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'devise', '~> 4.3.0'
+gem 'redcarpet', '~> 3.0.0'
+gem 'carrierwave'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
